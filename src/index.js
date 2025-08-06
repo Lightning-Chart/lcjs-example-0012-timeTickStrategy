@@ -16,6 +16,7 @@ const chart = lightningChart({
             resourcesBaseUrl: new URL(document.head.baseURI).origin + new URL(document.head.baseURI).pathname + 'resources/',
         })
     .ChartXY({
+        legend: { visible: false },
         theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
     })
     .setTitle('TimeTickStrategy example')
@@ -27,20 +28,7 @@ const axisX = chart
 
 const axisY = chart.getDefaultAxisY()
 
-const series = chart
-    .addPointLineAreaSeries({
-        dataPattern: 'ProgressiveX',
-    })
-    .setAreaFillStyle(emptyFill)
-
-const legend = chart
-    .addLegendBox()
-    .add(chart)
-    // Dispose example UI elements automatically if they take too much space. This is to avoid bad UI on mobile / etc. devices.
-    .setAutoDispose({
-        type: 'max-width',
-        maxWidth: 0.3,
-    })
+const series = chart.addLineSeries()
 
 // Generate ~8 hours of data for line series.
 const numberOfPoints = 100 * 1000
@@ -55,5 +43,5 @@ createProgressiveTraceGenerator()
             x: (p.x * xInterval) / numberOfPoints,
             y: p.y,
         }))
-        series.add(data)
+        series.appendJSON(data)
     })
