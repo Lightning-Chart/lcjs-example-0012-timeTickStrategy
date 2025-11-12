@@ -7,7 +7,7 @@ const lcjs = require('@lightningchart/lcjs')
 const xydata = require('@lightningchart/xydata')
 
 // Extract required parts from LightningChartJS.
-const { lightningChart, AxisTickStrategies, emptyFill, Themes } = lcjs
+const { lightningChart, AxisTickStrategies, emptyFill, Themes, SolidLine, SolidFill, ColorRGBA } = lcjs
 
 // Import data-generators from 'xydata'-library.
 const { createProgressiveTraceGenerator } = xydata
