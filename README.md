@@ -36,7 +36,7 @@ As can be seen from the simplicity of this examples source code, `TimeTickStrate
 chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.Time)
 
 // (2) Push data where X is in milliseconds.
-series.add([
+series.appendJSON([
     { x: 0, y: 0 }, // 00:00:00
     { x: 1000, y: 0 }, // 00:00:01
     { x: 2000, y: 0 }, // 00:00:02
@@ -80,9 +80,9 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2026. All rights reserved.
 
 
-[LightningChart]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/functions/lightningChart-1.html
-[Automatic tick placement strategies]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/variables/AxisTickStrategies.html
-[Chart XY]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/ChartXY.html
-[Axis XY]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/Axis.html
-[Line Series XY]: https://lightningchart.com/js-charts/api-documentation/v8.3.0/classes/PointLineAreaSeries.html
+[LightningChart]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/functions/lightningChart-1.html
+[Automatic tick placement strategies]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/variables/AxisTickStrategies.html
+[Chart XY]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/ChartXY.html
+[Axis XY]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/Axis.html
+[Line Series XY]: https://lightningchart.com/js-charts/api-documentation/v9.0.0/classes/PointLineAreaSeries.html
 
